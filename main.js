@@ -1,27 +1,26 @@
-let chilometriDaPercorrere=prompt("Inserire chilometri da percorrere");
-chilometriDaPercorrere=parseInt(chilometriDaPercorrere);
+const chilometriDaPercorrere=prompt("Inserire chilometri da percorrere");
+console.log(chilometriDaPercorrere);
 
-let etaPasseggero=prompt("inserire età passeggero");
-etaPasseggero=parseInt(etaPasseggero);
+const etaPasseggero=prompt("inserire età passeggero");
+console.log(etaPasseggero);
 
 let prezzoPerBiglietto=chilometriDaPercorrere*0.21;
-let sconto;
-let prezzoFinale;
-let prezzoFinaleIntero;
-
-
+console.log(prezzoPerBiglietto)
 
 
 if(etaPasseggero<18){
-    sconto=prezzoPerBiglietto*0.21;
-    prezzoFinaleIntero=prezzoPerBiglietto-sconto;
-    prezzoFinale=prezzoFinaleIntero.toFixed(2);
+    let sconto=prezzoPerBiglietto*0.2;
+    prezzoFinaleTotale=prezzoPerBiglietto-sconto;
+    prezzoFinale=prezzoFinaleTotale.toFixed(2);
+    console.log(prezzoFinaleTotale)
 }else if(etaPasseggero>65){
-    sconto=prezzoPerBiglietto*0.40;
-    prezzoFinaleIntero=prezzoPerBiglietto-sconto;
-    prezzoFinale=prezzoFinaleIntero.toFixed(2);
+    let sconto=prezzoPerBiglietto*0.4;
+    prezzoFinaleTotale=prezzoPerBiglietto-sconto;
+    prezzoFinale=prezzoFinaleTotale.toFixed(2);
+    console.log(prezzoFinaleTotale)
 }else{
     prezzoFinale=prezzoPerBiglietto.toFixed(2);
+    console.log(prezzoPerBiglietto)
 }
 
 document.getElementById("chilometriDaPercorrere").innerHTML= chilometriDaPercorrere;
